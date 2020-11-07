@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class AppleSpawner : MonoBehaviour
 {
+    /* Serialized private fields */
     [SerializeField] private GameObject applePrefab = null;
-
     [SerializeField] private GridManager gridManager = null;
 
+    /* Spawn an apple to start the game */
     void Start()
     {
         SpawnApple();
     }
     
     /* Instantiate an apple at a specified location on the grid */
-    // 25 x 25 grid (x = -12, 12) y = (12, -12)
     public void SpawnApple()
     {
         Instantiate(applePrefab, new Vector3(Random.Range(-gridManager.cols / 2, gridManager.cols / 2), Random.Range(gridManager.rows / 2, -gridManager.rows / 2), 0), Quaternion.identity);

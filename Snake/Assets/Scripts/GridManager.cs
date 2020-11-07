@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
+    /* Public fields */
     public int rows = 25;
     public int cols = 25;
     
+    /* Serialized private fields */
     [SerializeField] private float tileSize = 1;
 
+    /* Private fields */
     private BoxCollider2D _boxCollider2D;
-
-    // Start is called before the first frame update
+    
+    
+    /* Get Components and Generate the grid*/
     void Start()
     {
         GetComponents();
         GenerateGrid();
     }
 
+    /* Generates and Centers grid, resizes and centers BoxCollider2D */
     private void GenerateGrid()
     {
+        /* Generate Grid */
         GameObject referenceTile = (GameObject) Instantiate(Resources.Load("GameTile"));        // Load the GameTile prefab from the Resources folder
         for (int row = 0; row < rows; row++)
         {
@@ -46,6 +52,7 @@ public class GridManager : MonoBehaviour
         _boxCollider2D.offset = new Vector2(gridW / 2 + tileSize / 2 - 1, -gridH / 2 - tileSize / 2 + 1);
     }
 
+    /* Get references to any other needed components attached to this gameobject */
     private void GetComponents()
     {
         _boxCollider2D = GetComponent<BoxCollider2D>();

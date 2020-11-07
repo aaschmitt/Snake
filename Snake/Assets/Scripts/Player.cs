@@ -6,10 +6,13 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    /* Public fields */
     public UnityEvent OnAppleEaten;
     
+    /* Serialized private fields */
     [SerializeField] private float speed = 1f;
 
+    /* Private fields */
     private Direction _currentDirection;
     private enum Direction
     {
@@ -20,21 +23,25 @@ public class Player : MonoBehaviour
     }
 
 
+    /* Start player movement coroutine */
     void Start()
     {
         StartCoroutine(TimeMovement());
     }
     
+    /* Check for Input each frame */
     void Update()
     {
         HandleInput();
     }
 
+    /* Stop any coroutines when object is destroyed */
     void OnDestroy()
     {
         StopAllCoroutines();
     }
 
+    /* Move the player one unit depending upon _currentDirection */
     private void MovePlayer()
     {
         int x = (int) transform.position.x;
@@ -59,6 +66,7 @@ public class Player : MonoBehaviour
         transform.position = new Vector2(x, y);
     }
 
+    /* Move player according to speed */
     private IEnumerator TimeMovement()
     {
         while (true)
@@ -68,6 +76,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    /* Change _currentDirection depending upon input (WASD) */
     private void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.A))
@@ -88,17 +97,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    /* Destroy the player if they exit the game area (hit the wall) */
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Player has left Game Area");
         Destroy(gameObject);
     }
 
+    /* If player collides with an apple, destroy it and spawn a new apple */
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Apple")
         {
-            Debug.Log("Snake collided with an apple!");
             Destroy(other.gameObject);
             OnAppleEaten.Invoke();
         }
