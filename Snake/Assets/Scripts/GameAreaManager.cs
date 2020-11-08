@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridManager : MonoBehaviour
+public class GameAreaManager : MonoBehaviour
 {
     /* Public fields */
     public int rows = 25;
@@ -19,13 +19,13 @@ public class GridManager : MonoBehaviour
     void Start()
     {
         GetComponents();
-        GenerateGrid();
+        GenerateGameArea();
     }
 
     /* Generates and Centers grid, resizes and centers BoxCollider2D */
-    private void GenerateGrid()
+    private void GenerateGameArea()
     {
-        /* Generate Grid */
+        /* Generate Grid OLD */
         GameObject referenceTile = (GameObject) Instantiate(Resources.Load("GameTile"));        // Load the GameTile prefab from the Resources folder
         for (int row = 0; row < rows; row++)
         {
@@ -41,6 +41,12 @@ public class GridManager : MonoBehaviour
         }
         
         Destroy(referenceTile);                                                                       // Destroy the referenceTile created at beginning of method
+        
+        /* Generate GameArea NEW */
+        /*
+        GameObject gameArea = (GameObject) Instantiate(Resources.Load("GameTile"));
+        gameArea.transform.localScale = new Vector3(cols, rows, 0);
+        */
 
         /* Center Grid */
         float gridW = cols * tileSize;

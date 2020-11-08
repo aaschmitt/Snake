@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed = 1f;
     [SerializeField] private GameObject snakeBodyPrefab = null;
     [SerializeField] private Transform snakeBodyParent = null;
+    [SerializeField] private ParticleSystem snakeDeathPS = null;
 
     /* Private fields */
     private int _size = 0;                    // size of 0 means just head
@@ -47,9 +48,11 @@ public class Player : MonoBehaviour
         HandleInput();
     }
 
-    /* Stop any coroutines when object is destroyed */
+    /* Stop any coroutines and spawn particle system when object is destroyed */
     void OnDestroy()
     {
+        // Instantiate(snakeDeathPS, new Vector3(other.transform.position.x, other.transform.position.y, 0), Quaternion.identity);
+        Instantiate(snakeDeathPS, transform);
         StopAllCoroutines();
     }
 
@@ -126,7 +129,7 @@ public class Player : MonoBehaviour
     /* Destroy the player if they exit the game area (hit the wall) */
     private void OnTriggerExit2D(Collider2D other)
     {
-        Destroy(gameObject);
+        Destroy(this);
     }
 
     /* If player collides with an apple, destroy it and spawn a new apple. If collides with snakeBody, destroy snake */
@@ -141,7 +144,7 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.tag == "SnakeBody")
         {
-            Destroy(this.gameObject);
+            Destroy(this);
         }
     }
 

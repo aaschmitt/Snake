@@ -8,7 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="AppleSpawner.cs" t="Include" />
-          <e p="GridManager.cs" t="Include" />
+          <e p="GameAreaManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>
       </e>

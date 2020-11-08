@@ -323,7 +323,12 @@ PrefabInstance:
     - target: {fileID: 2783393030522079539, guid: 4fd01455207da9a478a873a6adb51dd0,
         type: 3}
       propertyPath: m_Name
-      value: GridHolder
+      value: GameAreaManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783393030522079549, guid: 4fd01455207da9a478a873a6adb51dd0,
+        type: 3}
+      propertyPath: rows
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fd01455207da9a478a873a6adb51dd0, type: 3}
@@ -337,6 +342,11 @@ PrefabInstance:
     - target: {fileID: 5230350198831660824, guid: 7cb176b8cd34cc247a6577043fca2c02,
         type: 3}
       propertyPath: gridManager
+      value: 
+      objectReference: {fileID: 1055773272}
+    - target: {fileID: 5230350198831660824, guid: 7cb176b8cd34cc247a6577043fca2c02,
+        type: 3}
+      propertyPath: gameAreaManager
       value: 
       objectReference: {fileID: 1055773272}
     - target: {fileID: 5230350198831660838, guid: 7cb176b8cd34cc247a6577043fca2c02,
@@ -478,5 +488,16 @@ PrefabInstance:
       propertyPath: snakeBodyParent
       value: 
       objectReference: {fileID: 379004949}
+    - target: {fileID: 8399767691110251421, guid: c7f7b70c0f7723c45b33316bc117b1d5,
+        type: 3}
+      propertyPath: increasePerApple
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399767691110251421, guid: c7f7b70c0f7723c45b33316bc117b1d5,
+        type: 3}
+      propertyPath: snakeDeathPS
+      value: 
+      objectReference: {fileID: 6136074852664660714, guid: ce815e620ab489646bf73ab0e038abab,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f7b70c0f7723c45b33316bc117b1d5, type: 3}
