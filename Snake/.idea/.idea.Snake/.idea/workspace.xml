@@ -23,14 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Apple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Apple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GridHolder.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GridHolder.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GameTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SnakeHead.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SnakeHead.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AppleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AppleSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameAreaManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GridManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameAreaManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +35,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -49,7 +46,9 @@
         <option value="$PROJECT_DIR$/Assets/AppleSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GridManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameAreaManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/LengthText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
       </list>
     </option>
   </component>
@@ -102,6 +101,7 @@
       <workItem from="1604446371587" duration="2250000" />
       <workItem from="1604757947363" duration="22396000" />
       <workItem from="1604844408233" duration="1685000" />
+      <workItem from="1604858658139" duration="4630000" />
     </task>
     <servers />
   </component>

@@ -160,3 +160,8 @@ MonoBehaviour:
   speed: 0.1
   snakeBodyPrefab: {fileID: 7285491929155332140, guid: ffec6efb617718e4aa83420991206933,
     type: 3}
+  snakeBodyParent: {fileID: 0}
+  snakeDeathPS: {fileID: 6136074852664660714, guid: ce815e620ab489646bf73ab0e038abab,
+    type: 3}
+  appleEatPS: {fileID: 3119153497414187317, guid: 6acc42db3fe37084da23b6d22d612367,
+    type: 3}

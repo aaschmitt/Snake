@@ -8,12 +8,14 @@ public class Player : MonoBehaviour
 {
     /* Public fields */
     public UnityEvent OnAppleEaten;
+    public UnityEvent OnSnakeDeath;
     
     /* Serialized private fields */
     [SerializeField] private float speed = 1f;
     [SerializeField] private GameObject snakeBodyPrefab = null;
     [SerializeField] private Transform snakeBodyParent = null;
     [SerializeField] private ParticleSystem snakeDeathPS = null;
+    [SerializeField] private ParticleSystem appleEatPS = null;
 
     /* Private fields */
     private int _size = 0;                    // size of 0 means just head
@@ -51,7 +53,7 @@ public class Player : MonoBehaviour
     /* Stop any coroutines and spawn particle system when object is destroyed */
     void OnDestroy()
     {
-        // Instantiate(snakeDeathPS, new Vector3(other.transform.position.x, other.transform.position.y, 0), Quaternion.identity);
+        OnSnakeDeath.Invoke();
         Instantiate(snakeDeathPS, transform);
         StopAllCoroutines();
     }
@@ -129,6 +131,7 @@ public class Player : MonoBehaviour
     /* Destroy the player if they exit the game area (hit the wall) */
     private void OnTriggerExit2D(Collider2D other)
     {
+        this.GetComponent<SpriteRenderer>().enabled = false;
         Destroy(this);
     }
 
@@ -139,6 +142,7 @@ public class Player : MonoBehaviour
         {
             Destroy(other.gameObject);
             OnAppleEaten.Invoke();
+            Instantiate(appleEatPS, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             ExtendSnake();
         }
 
