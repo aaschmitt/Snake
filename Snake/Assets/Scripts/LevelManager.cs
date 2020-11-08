@@ -34,6 +34,11 @@ public class LevelManager : MonoBehaviour
             if (_levelStarted) ReloadLevel();
             else StartLevel();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+        }
     }
 
     /* Starts the level by disabling instructions and activating the player object */

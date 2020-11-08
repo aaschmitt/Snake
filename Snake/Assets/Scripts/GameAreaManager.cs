@@ -25,28 +25,9 @@ public class GameAreaManager : MonoBehaviour
     /* Generates and Centers grid, resizes and centers BoxCollider2D */
     private void GenerateGameArea()
     {
-        /* Generate Grid OLD */
-        GameObject referenceTile = (GameObject) Instantiate(Resources.Load("GameTile"));        // Load the GameTile prefab from the Resources folder
-        for (int row = 0; row < rows; row++)
-        {
-            for (int col = 0; col < cols; col++)
-            {
-                GameObject tile = (GameObject) Instantiate(referenceTile, transform);
-
-                float posX = col * tileSize;
-                float posY = row * -tileSize;
-
-                tile.transform.position = new Vector2(posX, posY);
-            }
-        }
-        
-        Destroy(referenceTile);                                                                       // Destroy the referenceTile created at beginning of method
-        
         /* Generate GameArea NEW */
-        /*
         GameObject gameArea = (GameObject) Instantiate(Resources.Load("GameTile"));
         gameArea.transform.localScale = new Vector3(cols, rows, 0);
-        */
 
         /* Center Grid */
         float gridW = cols * tileSize;
