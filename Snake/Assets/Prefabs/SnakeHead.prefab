@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4025647387471700827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -157,6 +157,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnSnakeDeath:
+    m_PersistentCalls:
+      m_Calls: []
   speed: 0.1
   snakeBodyPrefab: {fileID: 7285491929155332140, guid: ffec6efb617718e4aa83420991206933,
     type: 3}

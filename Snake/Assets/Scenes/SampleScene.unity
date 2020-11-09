@@ -1200,6 +1200,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7821700498807948204, guid: c7f7b70c0f7723c45b33316bc117b1d5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821700498807948204, guid: c7f7b70c0f7723c45b33316bc117b1d5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8399767691110251421, guid: c7f7b70c0f7723c45b33316bc117b1d5,
         type: 3}
       propertyPath: OnAppleEaten.m_PersistentCalls.m_Calls.Array.size

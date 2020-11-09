@@ -110,20 +110,20 @@ public class Player : MonoBehaviour
     /* Change _currentDirection depending upon input (WASD) */
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) && _currentDirection != Direction.Right)                         // Move left
         {
             _currentDirection = Direction.Left;
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.D) && _currentDirection != Direction.Left)                    // Move right
         {
             _currentDirection = Direction.Right;
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S) && _currentDirection != Direction.Up)                    // Move down
         {
             _currentDirection = Direction.Down;
         }
-        else if (Input.GetKeyDown(KeyCode.W))
-        {
+        else if (Input.GetKeyDown(KeyCode.W) && _currentDirection != Direction.Down)                    // Move up
+        { 
             _currentDirection = Direction.Up;
         }
     }
