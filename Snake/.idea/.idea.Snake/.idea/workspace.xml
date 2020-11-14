@@ -20,12 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c20ced33-fe7e-4c93-acc1-089d94ddb856" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Apple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Apple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SnakeBody.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SnakeBody.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SnakeHead.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SnakeHead.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +108,8 @@
       <workItem from="1604757947363" duration="22396000" />
       <workItem from="1604844408233" duration="1685000" />
       <workItem from="1604858658139" duration="6158000" />
-      <workItem from="1604948756361" duration="975000" />
+      <workItem from="1604948756361" duration="1425000" />
+      <workItem from="1604951085094" duration="733000" />
     </task>
     <servers />
   </component>

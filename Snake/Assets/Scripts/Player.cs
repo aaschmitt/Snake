@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private List<Vector3> _snakePositionList;
     private List<GameObject> _snakeParts;
     private Direction _currentDirection;
+    private bool _keyPressed;
     private enum Direction
     {
         Up,
@@ -103,6 +104,7 @@ public class Player : MonoBehaviour
         while (true)
         {
             MovePlayer();
+            _keyPressed = false;
             yield return new WaitForSeconds(speed);
         }
     }
@@ -110,21 +112,27 @@ public class Player : MonoBehaviour
     /* Change _currentDirection depending upon input (WASD) */
     private void HandleInput()
     {
+        if (_keyPressed) return;
+        
         if (Input.GetKeyDown(KeyCode.A) && _currentDirection != Direction.Right)                         // Move left
         {
             _currentDirection = Direction.Left;
+            _keyPressed = true;
         }
         else if (Input.GetKeyDown(KeyCode.D) && _currentDirection != Direction.Left)                    // Move right
         {
             _currentDirection = Direction.Right;
+            _keyPressed = true;
         }
         else if (Input.GetKeyDown(KeyCode.S) && _currentDirection != Direction.Up)                    // Move down
         {
             _currentDirection = Direction.Down;
+            _keyPressed = true;
         }
         else if (Input.GetKeyDown(KeyCode.W) && _currentDirection != Direction.Down)                    // Move up
         { 
             _currentDirection = Direction.Up;
+            _keyPressed = true;
         }
     }
 
